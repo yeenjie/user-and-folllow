@@ -24,6 +24,7 @@ public class LoginController {
             return "User name and password do not match";
         }else{
             session.setAttribute("username",user.getName());
+            session.setAttribute("userid",user1.getId());
             return "Success";
         }
     }

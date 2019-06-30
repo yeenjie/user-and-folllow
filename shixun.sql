@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : shixun
+ Source Server         : localhost_3306
  Source Server Type    : MySQL
  Source Server Version : 50515
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 50515
  File Encoding         : 65001
 
- Date: 30/06/2019 11:06:22
+ Date: 30/06/2019 16:48:38
 */
 
 SET NAMES utf8mb4;
@@ -23,9 +23,21 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `follow`;
 CREATE TABLE `follow`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` int(11) NULL DEFAULT NULL,
   `fid` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 29 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of follow
+-- ----------------------------
+INSERT INTO `follow` VALUES (2, 1, 3);
+INSERT INTO `follow` VALUES (3, 4, 1);
+INSERT INTO `follow` VALUES (4, 1, 16);
+INSERT INTO `follow` VALUES (5, 2, 16);
+INSERT INTO `follow` VALUES (26, 16, 2);
+INSERT INTO `follow` VALUES (27, 16, 2);
+INSERT INTO `follow` VALUES (28, 16, 2);
 
 -- ----------------------------
 -- Table structure for product
@@ -61,24 +73,26 @@ CREATE TABLE `user_`  (
   `password` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `del` int(11) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of user_
 -- ----------------------------
-INSERT INTO `user_` VALUES (1, '修改', '123', 1);
+INSERT INTO `user_` VALUES (1, '修1', '123', 0);
 INSERT INTO `user_` VALUES (2, 'yeene', '1243', 1);
-INSERT INTO `user_` VALUES (3, '修改', NULL, 1);
+INSERT INTO `user_` VALUES (3, '修111', '33123', 1);
 INSERT INTO `user_` VALUES (4, '测试用户2', '1324', 1);
-INSERT INTO `user_` VALUES (5, '修改', '123', 1);
+INSERT INTO `user_` VALUES (5, '333', '123', 0);
 INSERT INTO `user_` VALUES (6, NULL, NULL, 0);
 INSERT INTO `user_` VALUES (7, NULL, NULL, 0);
 INSERT INTO `user_` VALUES (8, NULL, NULL, 0);
 INSERT INTO `user_` VALUES (9, NULL, NULL, 0);
 INSERT INTO `user_` VALUES (10, '123', NULL, 1);
 INSERT INTO `user_` VALUES (11, '新增', NULL, 1);
-INSERT INTO `user_` VALUES (12, '修改', '修改', 1);
-INSERT INTO `user_` VALUES (13, '修改贵ll22', '123', 0);
+INSERT INTO `user_` VALUES (12, '修改5555', '修改', 0);
+INSERT INTO `user_` VALUES (13, '修改贵ll22', '123', 1);
 INSERT INTO `user_` VALUES (14, 'y123', '123', 0);
+INSERT INTO `user_` VALUES (15, NULL, NULL, 0);
+INSERT INTO `user_` VALUES (16, 'admin', '123', 0);
 
 SET FOREIGN_KEY_CHECKS = 1;

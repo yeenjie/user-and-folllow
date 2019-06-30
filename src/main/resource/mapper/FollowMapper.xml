@@ -3,13 +3,17 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.yej.ssm.mapper.CategoryMapper">
-    <select id="getFollowId" parameterType="User" resultType="Follow">
-          select * from   follow,user_ where follow.id=${id} and id!=${id}
+<mapper namespace="com.yej.ssm.mapper.FollowMapper">
+
+    <select id="listFollows" parameterType="_int" resultType="User">
+          select u.id id,u.name name from  follow f,user_ u where u.id=f.fid and f.pid=#{id} and  u.del!=1 group by u.name
     </select>
 
-    <insert id="addFollowId" >
-          Insert into
+    <insert id="addFollow" >
+          Insert into follow values(null,#{0},#{1})
     </insert>
 
+    <insert id="deleteFollow">
+          Delete from follow where pid=#{0} and fid=#{1}
+    </insert>
 </mapper>

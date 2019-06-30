@@ -2,7 +2,17 @@ package com.yej.ssm.pojo;
 
 public class Follow {
     int id;
+    int pid;
     int fid;
+
+
+    public int getPid() {
+        return pid;
+    }
+
+    public void setPid(int pid) {
+        this.pid = pid;
+    }
 
     public int getId() {
         return id;

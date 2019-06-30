@@ -16,11 +16,13 @@
 </head>
 <body>
 欢迎用户：${username}
+欢迎用户：${userid}
 <a href="jump">新增</a>
 <form method="post" action="searchUser">
-    <input type="text" name="name"> <input type="submit" name="搜索">
+    <input type="text" name="name">
+    <input type="submit" value="搜索">
 </form>
-
+<a href="listFollows?id=${userid}"> 我的关注</a>
 <table width="200px" align="center" border="1" cellspacing="0">
     <tr>
         <td>用户名称</td>
@@ -34,7 +36,7 @@
             <td>${user.name}</td>
             <td>${user.password}</td>
             <td><a href="deleteUser?id=${user.id}">删除</a></td>
-            <td><a href="followUser?id=${user.id}">关注</a></td>
+            <td><a href="followUser?fid=${user.id}&pid=${userid}">关注</a></td>
             <td><a href="editUser?id=${user.id}">编辑</a></td>
         </tr>
     </c:forEach>
