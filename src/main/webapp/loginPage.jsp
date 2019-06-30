@@ -14,7 +14,7 @@
 <script>
     $(function(){
         $("#login").click(function(){
-            alert("TET");
+            // alert("TET");
             var name=$("#name").val();
             var password=$("#password").val();
             $.ajax({
@@ -34,13 +34,12 @@
 </script>
 
 <body>
-
-
-        <input id="name" type="text" name="name">
-        <input id="password" type="password" name="password">
-        <button id="login" onclick="" name="login">ajax登陆</button>>
-            <%--<input type="submit" name="普通方法">--%>
-
+    <div style="height: 200px; width:200px; margin:0 auto">
+        <input id="name" type="text" name="name"><br>
+        <input id="password" type="password" name="password"><br>
+        <button id="login" onclick="" name="login">ajax登陆</button>
+        <%--<input type="submit" name="普通方法">--%>
+    </div>
 
 </body>
 </html>

@@ -22,7 +22,7 @@ public class UserController {
         User user1 = new User();
         String username = (String) session.getAttribute("username");
         user1.setName(username);
-        System.out.println(username);
+//        System.out.println(username);
         List<User> users = userService.list(user1);
         modelAndView.addObject("users",users);
         return modelAndView;

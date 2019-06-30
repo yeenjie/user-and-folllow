@@ -19,7 +19,7 @@ public class FollowController {
     @RequestMapping("listFollows")
     public ModelAndView listsFollows(int id){
         ModelAndView modelAndView = new ModelAndView("listFollows");
-        System.out.println(id);
+//        System.out.println(id);
         List<User> users = followService.listFollows(id);
         modelAndView.addObject("users",users);
         return  modelAndView;
