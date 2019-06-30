@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yej.ssm.mapper.ProductMapper">
+    <select id="listUserProducts" parameterType="_int" resultType="Product">
+        select * from   product  where uid= #{id} AND delete_=0
+    </select>
+
+    <update id="updateProduct" parameterType="Product">
+        UPDATE product set name = #{name},price=#{price},delete_=#{delete_} WHERE id=#{id}
+    </update>
+
+    <select id="queryProductById" parameterType="_int" resultType="Product">
+        SELECT * FROM product WHERE id=#{id}
+    </select>
+</mapper>
