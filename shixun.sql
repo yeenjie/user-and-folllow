@@ -11,7 +11,7 @@
  Target Server Version : 50515
  File Encoding         : 65001
 
- Date: 30/06/2019 16:48:38
+ Date: 30/06/2019 16:51:34
 */
 
 SET NAMES utf8mb4;
@@ -83,16 +83,11 @@ INSERT INTO `user_` VALUES (2, 'yeene', '1243', 1);
 INSERT INTO `user_` VALUES (3, '修111', '33123', 1);
 INSERT INTO `user_` VALUES (4, '测试用户2', '1324', 1);
 INSERT INTO `user_` VALUES (5, '333', '123', 0);
-INSERT INTO `user_` VALUES (6, NULL, NULL, 0);
-INSERT INTO `user_` VALUES (7, NULL, NULL, 0);
-INSERT INTO `user_` VALUES (8, NULL, NULL, 0);
-INSERT INTO `user_` VALUES (9, NULL, NULL, 0);
 INSERT INTO `user_` VALUES (10, '123', NULL, 1);
 INSERT INTO `user_` VALUES (11, '新增', NULL, 1);
 INSERT INTO `user_` VALUES (12, '修改5555', '修改', 0);
 INSERT INTO `user_` VALUES (13, '修改贵ll22', '123', 1);
 INSERT INTO `user_` VALUES (14, 'y123', '123', 0);
-INSERT INTO `user_` VALUES (15, NULL, NULL, 0);
 INSERT INTO `user_` VALUES (16, 'admin', '123', 0);
 
 SET FOREIGN_KEY_CHECKS = 1;
